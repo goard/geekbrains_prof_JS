@@ -31,15 +31,6 @@ class ProductList {
     this._totalCost();
   }
 
-  // _fetchGoods() {
-  //   this._goods = [
-  //     {id:1, title: 'Notebook', price: 20000},
-  //     {id:2, title: 'Mouse', price: 1500},
-  //     {id:3, title: 'Keyboard', price: 5000},
-  //     {id:4, title: 'Gamepad', price: 4500},
-  //   ]
-  // }
-
   _getProducts() {
     return fetch(`${API}/catalogData.json`)
       .then(response => response.json())
@@ -86,4 +77,21 @@ class ProductItem {
   }
 }
 
+class SendForm {
+  constructor() {
+
+  }
+
+  _sendForm() {
+
+  }
+}
+
 const cart = new ProductList()
+
+//Home work for Lesson4
+let str = 'dfghjk \'dfg\' aren\'t \'sdf' ;
+console.log(str)
+let regExp = /\b\'\B|\B\'\b/ig
+console.log(regExp)
+console.log(str.replace(regExp, '\"'))
