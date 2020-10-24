@@ -8,13 +8,12 @@
 header {
   display: flex;
   justify-content: end;
-  border: 1px solid #221e1e;
   padding: 10px;
+  background-color: yellowgreen;
 }
 
 main {
   margin-top: 2em;
-
 }
 
 .goods-list {
