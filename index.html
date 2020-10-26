@@ -9,12 +9,23 @@
 </head>
 <body>
   <header>
-    <h6>Общая стоимость&nbsp;</h6>
-    <h6 class="total"></h6>
+    <h3>Интернет магазин</h3>
+    <h6 class="total">Общая стоимость </h6>
     <button class="btn btn-primary" type="button">Корзина</button>
   </header>
   <main class="container">
+    <form>
+      <fieldset style="margin-bottom: 2em;">
+        <legend>Форма обратной связи</legend>
+        <input type="text" name="name" id="name" placeholder="Имя">
+        <input type="tel" name="tel" id="tel" placeholder="Телефон">
+        <input type="email" name="email" id="email" placeholder="Email">
+        <input type="submit" value="Отправить" id="send">
+      </fieldset>
+
+    </form>
     <div class="goods-list"></div>
+
   </main>
   <script src="script.js"></script>
 </body>
