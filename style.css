@@ -13,6 +13,12 @@ header {
   background-color: yellowgreen;
 }
 
+.icon-search {
+  position: relative;
+  right: 42px;
+  bottom: 2px;
+}
+
 main {
   margin-top: 2em;
 
@@ -23,7 +29,7 @@ main {
   justify-content: space-between;
 }
 
-.goods-item {
+.good-item {
   border: 1px solid #000;
   padding: 0.5em;
   display: flex;
@@ -31,7 +37,7 @@ main {
   align-items: center;
 }
 
-.goods-item:not(:last-child) {
+.good-item:not(:last-child) {
   margin-right: 2em;
 }
 
