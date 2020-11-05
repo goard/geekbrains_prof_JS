@@ -8,8 +8,8 @@ Vue.component('products', {
     }
   },
   methods: {
-    searchGoods() {
-      let regexp = new RegExp(this.searchLine, 'i')
+    searchGoods(value) {
+      let regexp = new RegExp(value, 'i')
       this.filtered = this.products.filter(el => regexp.test(el.product_name))
     },
   },
@@ -27,8 +27,7 @@ Vue.component('products', {
                 v-for="item of filtered"
                 :key="item.id_product"
                 :product="item"
-                :img="imgCatalog"
-                @addProduct="addProduct">
+                :img="imgCatalog">
               </product>
             </div>`
 })
