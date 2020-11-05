@@ -26,39 +26,16 @@
           </svg>
         </button>
       </form>
-      <button class="btn btn-primary btn-card" type="button" @click="switchShow=!switchShow">Корзина</button>
-      <div class="card-visible" v-show="switchShow">
-        <p v-if="!cartItems.length">Корзина пуста</p>
-        <div class="item-card" v-for="item of cartItems" :key="item.id_product">
-          <div>
-            <img :src="imgCart" alt="Some image" >
-          </div>
-          <div>
-            <div>
-              <p class="text-card">{{item.product_name}}</p>
-              <p class="text-card">Количество: {{item.quantity}}</p>
-              <p class="text-card">{{item.price}}&#8381; за единицу</p>
-              <p class="text-card">{{item.quantity*item.price}}&#8381;</p>
-            </div>
-          </div>
-          <button class="btn btn-danger" @click="remove(item)">x</button>
-        </div>
-      </div>
+      <cart ref="cart"></cart>
     </header>
-    <main class="container goods-list">
-      <div class="product-item good-item" v-for="product of filtered" :key="product.id_product"
-        :data-id="product.id_product">
-        <img :src="imgCatalog" alt="Some img">
-        <div>
-          <h3>{{product.product_name}}</h3>
-          <p>{{product.price}} &#8381;</p>
-          <button class="btn btn-success" @click="addProduct(product)">Купить</button>
-        </div>
-      </div>
+    <main class="container">
+      <products ref="products"></products>
     </main>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="CartComponents.js"></script>
+  <script src="ProductsComponent.js"></script>
   <script src="script.js"></script>
 </body>
 
