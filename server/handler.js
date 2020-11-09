@@ -1,9 +1,11 @@
 const fs = require('fs')
 const cart = require('./cart')
+const logger = require('./logger')
 
-const action = {
+const actions = {
   add: cart.add,
   change: cart.change,
+  remove: cart.remove,
 }
 
 const handler = (req, res, action, file) => {
@@ -16,6 +18,8 @@ const handler = (req, res, action, file) => {
         if (err) {
           res.send('{"result": 0}')
         } else {
+          console.log(name)
+          logger(name, action)
           res.send('{"result": 1}')
         }
       })
